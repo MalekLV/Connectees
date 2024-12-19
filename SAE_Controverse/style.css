@@ -1,0 +1,351 @@
+@font-face {
+  font-family: 'apple';
+  src: url('fonts/h1/AppleGaramond.ttf');
+}
+
+
+
+/* Barre de navigation */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+
+
+nav a,
+.burger a {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'apple', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a:hover,
+.burger a:hover {
+  color: #A79E9E;
+}
+
+/* Menu défilant du PESTEL */
+.submenu {
+  position: absolute;
+  background-color: black;
+  padding: 10px 0;
+  display: none;
+  width: 100%;
+
+}
+
+.submenu a {
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.navs {
+  position: relative;
+}
+
+.navs:hover .submenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.burger {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+
+
+/* Sous format ordinateur */
+@media screen and (min-width:769px) {
+  .burger {
+    display: none;
+  }
+
+  nav {
+    background-color: rgb(129, 124, 124);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navs:hover .submenu {
+    align-items: center;
+  }
+
+  .footer-item ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+
+/* Sous format téléphone */
+@media screen and (max-width:768px) {
+  nav {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .burger:hover .burger-menu {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navs:hover .submenu {
+    align-items: start;
+  }
+
+  .submenu {
+    position: relative;
+  }
+
+  .accueil #imgGrand {
+    display: none;
+  }
+
+  .accueil #imgPetit {
+    display: block;
+  }
+
+  .footer-container {
+    flex-direction: column-reverse;
+  }
+
+  .footer-item:nth-of-type(1) p {
+    text-align: center;
+  }
+
+  .footer-item:nth-of-type(2),
+  .footer-item:nth-of-type(3) p {
+    display: none;
+  }
+
+}
+
+
+/* MAIN */
+main {
+  padding: 80px 10px 20px 10px;
+}
+
+body {
+  /*background-color: #ebebeb;*/
+  background-image: url("IMAGES/marbre-back.png");
+  margin: 0;
+  padding: 0;
+}
+
+.accueil {
+  /* vh = pourcentage en fonction de la taille de la fenetre, permet à l'accueil de prendre la taille de la fenetre pour l'utilisateur */
+  height: 85vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.accueil p {
+  font-family: 'apple', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media screen and (max-width:444px) {
+  .accueil #imgGrand {
+    display: none;
+  }
+
+  .accueil #imgPetit {
+    display: block;
+  }
+}
+
+@media screen and (min-width:444px) {
+  .accueil #imgGrand {
+    display: block;
+  }
+
+  .accueil #imgPetit {
+    display: none;
+  }
+
+}
+
+.pestel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+}
+
+.pestel article {
+  margin: 40px;
+  text-align: justify;
+}
+
+.pestel article h2 {
+  text-decoration: underline;
+  font-family: system-ui;
+}
+
+.pestel article p {
+  font-family: sans-serif;
+  text-indent: 20px;
+}
+
+.pestel>div>article {
+  background-color: #c0bcbc;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+/* vw = pourcentage en fonction de la largeur de la fenetre */
+.analyse .pestel div:nth-child(odd) article {
+  margin-left: 20vw;
+  position: relative;
+  left: 0;
+}
+
+.analyse .pestel div:nth-child(even) article {
+  margin-right: 20vw;
+  position: relative;
+  right: 0;
+}
+
+/* Formulaire */
+
+.part1 {
+  width: 110px;
+  display: inline-block;
+}
+
+.part2 {
+  width: 250px;
+  display: inline-block;
+}
+
+fieldset {
+  margin-top: 20px;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'apple', 'Segoe UI', Tahoma, sans-serif;
+}
+
+textarea {
+  width: 260px;
+  height: 35px;
+}
+
+.fieldset-1,
+.fieldset-2 {
+  margin-bottom: 2%;
+  background-color: #C0BCBC;
+  box-shadow: 2px 2px 8px rgba(114, 99, 99, 0.5);
+}
+
+/* Footer */
+footer {
+  background-color: rgb(110, 110, 110);
+  color: white;
+  padding: 0px 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.co {
+  color: grey;
+}
+
+.footer-item {
+  margin-bottom: 10px;
+}
+
+.footer-item h2 {
+  font-size: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.footer-item p,
+.footer-item ul {
+  margin-bottom: 15px;
+  font-family: 'apple', Arial, Helvetica, sans-serif;
+}
+
+
+
+.footer-item ul li a {
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+.footer-item ul li a:hover {
+  color: #A79E9E
+;
+}
+
+footer .social-icons {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .social-icons a {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  color: #ffffff;
+  text-align: center;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+footer .social-icons img {
+  margin-top: 2px;
+  width: 40px;
+  height: 40px;
+}
+
+footer .social-icons a:hover {
+  background-color: #A79E9E;
+}
+
+/* Fin du footer */

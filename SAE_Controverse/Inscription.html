@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- pour respponsive -->
+  <title>Contactez-nous</title>
+  <link rel="icon" href="IMAGES/icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+
+    <nav>
+      <a href="Accueil.html">ACCUEIL</a>
+      <a href="la-controverse.html">SYNOPSIS</a>
+      <div class="navs">
+        <a href="Analyse-pestel.html">ANALYSE PESTEL</a>
+        <div class="submenu">
+          <div><a href="Analyse-pestel.html#Politique">Politique</a></div>
+          <div><a href="Analyse-pestel.html#Economique">Economique</a></div>
+          <div><a href="Analyse-pestel.html#Sociale">Sociale</a></div>
+          <div><a href="Analyse-pestel.html#Technologique">Technologique</a></div>
+          <div><a href="Analyse-pestel.html#Environnementale">Environnementale</a></div>
+          <div><a href="Analyse-pestel.html#Legale">Legale</a></div>
+        </div>
+      </div>
+      <a href="Inscription.html">INSCRIPTION</a>
+    </nav>
+
+    <div class="burger">
+      <img src="IMAGES/Hamburger_icon.png" alt="menu_burger" width="50">
+      <div class="burger-menu">
+        <a href="Accueil.html">ACCUEIL</a>
+        <a href="Inscription.html">INSCRIPTION</a>
+        <a href="la-controverse.html">SYNOPSIS</a>
+        <div class="navs">
+          <a href="Analyse-pestel.html">ANALYSE PESTEL</a>
+          <div class="submenu">
+            <div><a href="Analyse-pestel.html#Politique">Politique</a></div>
+            <div><a href="Analyse-pestel.html#Economique">Economique</a></div>
+            <div><a href="Analyse-pestel.html#Sociale">Sociale</a></div>
+            <div><a href="Analyse-pestel.html#Technologique">Technologique</a></div>
+            <div><a href="Analyse-pestel.html#Environnementale">Environnementale</a></div>
+            <div><a href="Analyse-pestel.html#Legale">Legale</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <form action="sendToMySecondYearInIut.php" method="get"><br>
+      <fieldset class="fieldset-1">
+        <legend>Informations personnelles</legend>
+        <p>
+          <label for="nom"><span class=part1>Nom *</span></label>
+          <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
+        </p>
+        <p>
+          <label for="prénom"><span class=part1>Prénom </span></label>
+          <input type="text" name="prénom" id="prénom" placeholder="Votre prénom">
+        </p>
+        <p>
+          <label for="email"><span class=part1>Mail *</span></label>
+          <input type="email" id="email" name="email" placeholder="Votremail@domain.com" required>
+        </p>
+        <p>
+          <label for="pwd"><span class=part1>Mot de passe *</span></label>
+          <input type="password" id="pwd" name="pwd" pattern="[a-z]{0-9}" minlength="6"
+            placeholder="6 caractères minimum" required>
+        </p>
+        <p>
+          <label for="codep"><span class=part1>Code Postal *</span></label>
+          <input type="text" id="codep" name="codep" placeholder="Votre code postal" pattern="[0-9]{2}[0-9]{3}"
+            required>
+        </p>
+        <p>
+          <label for="pays"><span class=part1>Pays d'origine</span></label>
+          <select name="pays" id="pays">
+            <option value="fr">France</option>
+            <option value="all">Allemagne</option>
+            <option value="au">Australie</option>
+            <option value="br">Brésil</option>
+            <option value="ca">Canada</option>
+            <option value="ch">Chine</option>
+            <option value="es">Espagne</option>
+            <option value="gr">Grèce</option>
+            <option value="jap">Japon</option>
+            <option value="ma">Malaisie</option>
+            <option value="po">Portugal</option>
+            <option value="ru">Russie</option>
+            <option value="tu">Turquie</option>
+            <option value="usa">U.S.A</option>
+            <option value="vm">Vietnam</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset class="fieldset-2">
+        <legend>Nous contacter</legend>
+        <p>
+          <label for="texte"><span class=part2>Objet de votre message</span></label>
+          <textarea id="texte" name="texte"
+            placeholder="Vous pouvez nous contacter pour plus d'informations"></textarea>
+        </p>
+        <p>
+          <label for="date"><span class=part2>Date à laquelle vous souhaitez être recontacté</span></label>
+          <input type="date" id="date" name="date">
+        </p>
+        <p>
+          <label for="entenduParlé"><span class=part2>Vous avez entendu parlé de nous via</span></label>
+          <select name="entenduParlé" id="entenduParlé" multiple>
+            <option value="">Selectionner une ou plusieurs réponses</option>
+            <option value="podcast">Notre podcast</option>
+            <option value="radio">A la radio</option>
+            <option value="rs">Sur les réseaux sociaux</option>
+          </select>
+        </p>
+        <p><span class=part2>Selon vous, la numérique favorise t'il le lien social</span></p>
+        <input type="radio" id="oui" name="sondage" value="o">
+        <label for="oui">oui</label><br>
+        <input type="radio" id="non" name="sondage" value="n">
+        <label for="non">non</label>
+        <p>
+          <input type="submit" value="Envoyer"><span class=s></span>
+        </p>
+      </fieldset>
+    </form>
+
+  </main>
+</body>
+
+</html>
